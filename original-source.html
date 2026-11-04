@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Yasmin Yusof">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mimottt.syamimi-sdin.workers.dev/">
+<meta property="og:description" content="Graphic and Creative Designer. Logos, illustration, book covers, murals and 3D printing.">
+<meta property="og:image" content="https://mimottt.syamimi-sdin.workers.dev/images/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Yasmin Yusof, Graphic and Creative Designer, with her lemon character">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mimottt.syamimi-sdin.workers.dev/images/og.jpg">
+<title>Yasmin Yusof</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Yasmin Yusof: logo design, illustration, book covers, murals and art education.">
+<link rel="icon" href="images/face-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Caveat:wght@600&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400..600&display=swap">
+<style>
+/* Layout: follows the reference studio site. Grey intro with her lemon face; scrolling opens the mouth wide and dives inside, so the navy of the mouth becomes the services section. Then real works in a masonry gallery, about with her photo, navy footer. Single light look on purpose: the grey is her canvas. */
+:root{
+  --bg:#D9DCDB; --bg-2:#CDD1D0; --paper:#F7F8F6; --ink:#1C305B; --ink-2:#26406F;
+  --sun:#FCD928; --clay:#BA5042; --muted:#4D5A77; --line:rgba(28,48,91,.15); --soft:rgba(28,48,91,.07);
+  --f-display:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"DM Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:"Caveat","Segoe Print","Comic Sans MS",cursive;
+  --hdr:68px; --r:24px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+[hidden]{display:none!important}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--clay);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1280px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{scroll-margin-top:calc(var(--hdr) + 8px)}
+.eyebrow{font-family:var(--f-mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--clay)}
+.h2{font-family:var(--f-display);font-weight:720;font-size:clamp(38px,5.4vw,76px);line-height:.98;letter-spacing:-.035em;margin:0;text-wrap:balance}
+.hl{background:linear-gradient(var(--sun),var(--sun)) no-repeat 0 88%/100% 34%;padding:0 .05em;color:var(--ink)}
+
+/* header */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);color:var(--ink);transition:background .35s,color .35s}
+.hdr.solid{background:var(--ink);color:var(--paper)}
+.hdr .wrap{height:var(--hdr);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--f-display);font-weight:700;font-size:18px;letter-spacing:-.02em;white-space:nowrap}
+.dot{width:44px;height:44px;border-radius:50%;background:var(--paper);display:grid;place-items:center;overflow:hidden;flex:none;transition:transform .4s cubic-bezier(.3,1.5,.5,1);box-shadow:0 0 0 1.5px var(--line)}
+.dot img{width:58%;margin-top:18%}
+.brand:hover .dot{transform:rotate(-10deg) scale(1.08)}
+.brand .nm{opacity:0;transform:translateX(-6px);transition:opacity .35s,transform .35s}
+.hdr.solid .brand .nm{opacity:1;transform:none}
+.menu-btn{all:unset;cursor:pointer;font-family:var(--f-mono);font-size:14px;letter-spacing:.12em;padding:10px 4px 10px 14px;display:flex;align-items:center;gap:10px}
+.menu-btn i{display:grid;gap:5px;width:22px}
+.menu-btn i::before,.menu-btn i::after{content:"";height:2px;background:currentColor;border-radius:2px}
+.menu-btn:focus-visible{outline:3px solid var(--clay);outline-offset:3px;border-radius:8px}
+.overlay{position:fixed;inset:0;z-index:70;background:var(--ink);color:var(--paper);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);animation:fade .35s ease}
+@keyframes fade{from{opacity:0}}
+.overlay .top{height:var(--hdr);display:flex;align-items:center;justify-content:space-between;width:100%}
+.overlay nav{flex:1;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.overlay nav a{font-family:var(--f-display);font-weight:760;font-size:clamp(42px,8.5vw,92px);line-height:1.04;letter-spacing:-.04em;text-decoration:none;display:flex;align-items:baseline;gap:16px;transition:color .25s,transform .35s}
+.overlay nav a:hover{color:var(--sun);transform:translateX(10px)}
+.overlay nav a small{font-family:var(--f-mono);font-size:13px;letter-spacing:.1em;opacity:.55;font-weight:400}
+.overlay .bottom{padding-block:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-family:var(--f-mono);font-size:13px;letter-spacing:.06em;opacity:.8}
+
+/* intro */
+.intro{position:relative;height:300vh;background:var(--bg)}
+.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;place-items:center}
+.zoom{position:relative;will-change:transform}
+.enter{animation:enter 1.1s cubic-bezier(.3,1.3,.5,1) both}
+@keyframes enter{from{transform:translateY(24%) scale(.85);opacity:0}}
+.rig{position:relative;height:min(64svh,128vw);aspect-ratio:552/900;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.rig .base{position:absolute;inset:0;width:100%;height:100%;max-width:none;user-select:none;-webkit-user-drag:none}
+.rig .brow{position:absolute;max-width:none;user-select:none}
+.rig .bl{left:24.7%;top:22.41%;width:21.42%}
+.rig .br{left:60.11%;top:24.77%;width:21.74%}
+.rig svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.dive{position:absolute;inset:0;background:var(--ink);opacity:0;pointer-events:none}
+.intro-name{position:absolute;left:0;right:0;bottom:max(26px,env(safe-area-inset-bottom,0px));text-align:center;pointer-events:none}
+.intro-name h1{margin:0;font-family:var(--f-display);font-weight:780;font-size:clamp(34px,5.8vw,80px);line-height:.95;letter-spacing:-.045em;text-wrap:balance}
+.intro-name p{margin:12px 0 0;font-family:var(--f-mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.hint{position:absolute;right:max(18px,env(safe-area-inset-right,0px));top:50%;translate:0 -50%;writing-mode:vertical-rl;font-family:var(--f-mono);font-size:12px;letter-spacing:.2em;display:flex;align-items:center;gap:10px}
+.hint::after{content:"";width:1.5px;height:44px;background:currentColor;animation:drip 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes drip{50%{transform:scaleY(.4)}}
+@media (max-width:640px){.hint{display:none}}
+
+/* services: stacking cards on navy */
+.svc-sec{background:var(--ink);color:var(--paper);padding-block:clamp(40px,6vw,80px) clamp(80px,10vw,140px);margin-top:-1px}
+.svc-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 40px;margin-bottom:clamp(28px,4vw,48px)}
+.svc-head .t{display:flex;flex-direction:column;gap:14px}
+.svc-head .eyebrow{color:var(--paper);opacity:.75}
+.svc-head .eyebrow::before{background:var(--sun)}
+.svc-head p{margin:0;max-width:25em;opacity:.8}
+.svc-head .hl{background:none;color:var(--sun);padding:0}
+.cards{display:flex;flex-direction:column;gap:28px}
+.scard{position:sticky;top:calc(var(--hdr) + 14px + var(--i) * 16px);min-height:min(72svh,600px);border-radius:30px;padding:clamp(20px,2.6vw,34px);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(18px,3vw,40px);color:var(--ink);transform:scale(var(--s,1));transform-origin:50% 0;box-shadow:0 -12px 40px -24px rgba(0,0,0,.5)}
+.scard .txt{display:flex;flex-direction:column;gap:14px;min-width:0}
+.scard .num{font-family:var(--f-mono);font-size:13px;letter-spacing:.1em;opacity:.7}
+.scard h3{margin:0;font-family:var(--f-display);font-weight:760;font-size:clamp(36px,5vw,72px);line-height:.95;letter-spacing:-.04em;text-wrap:balance}
+.scard p{margin:0;font-size:clamp(16px,1.5vw,20px);max-width:22em}
+.scard ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:4px 0 0;padding:0}
+.scard li{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid currentColor;border-radius:999px;padding:5px 12px}
+.view{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:var(--f-mono);font-size:13px;letter-spacing:.12em;border-radius:999px;padding:12px 14px 12px 20px;transition:gap .3s;border:none;cursor:pointer}
+.view i{font-style:normal;width:28px;height:28px;border-radius:50%;background:var(--sun);color:var(--ink);display:grid;place-items:center;transition:rotate .3s}
+.view:hover{gap:18px}
+.view:hover i{rotate:-45deg}
+.scard .pic{position:relative;border-radius:20px;overflow:hidden;min-height:260px;background:var(--paper)}
+.scard .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.scard .pic.fit img{object-fit:contain;padding:8%}
+.scard:hover .pic img{transform:scale(1.04)}
+.c1{background:var(--sun)}
+.c2{background:var(--paper)}
+.c3{background:var(--clay);color:var(--paper)}
+.c3 .view{background:var(--paper);color:var(--ink)}
+.c4{background:var(--bg)}
+.c5{background:var(--sun)}
+.scard .pic.top img{object-position:50% 30%}
+@media (max-width:780px){.scard{grid-template-columns:1fr;min-height:0}.scard .pic{aspect-ratio:4/3;min-height:0}.view{margin-top:4px}}
+
+/* works */
+.sec{padding-block:clamp(70px,9vw,130px)}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:18px 40px;margin-bottom:clamp(26px,3.5vw,44px)}
+.head .t{display:flex;flex-direction:column;gap:14px;min-width:0}
+.head .sub{margin:0;max-width:25em;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(22px,3vw,34px)}
+.filters button{font:500 15px var(--f-body);color:var(--ink);background:var(--paper);border:none;border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .25s,color .25s;display:inline-flex;gap:8px;align-items:center}
+.filters button small{font-family:var(--f-mono);font-size:11px;opacity:.6}
+.filters button:hover{background:var(--bg-2)}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.filters .fl{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);align-self:center;margin:0 4px 0 10px}
+.filters .fl:first-child{margin-left:0}
+.filters .br{flex-basis:100%;height:0}
+.work .ph{position:relative}
+.work .count{position:absolute;right:10px;bottom:10px;background:var(--ink);color:var(--paper);font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;border-radius:999px;padding:4px 10px}
+.masonry{display:flex;gap:20px;align-items:flex-start}
+.mcol{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:20px}
+.work{margin:0;background:var(--paper);border-radius:var(--r);overflow:hidden;cursor:zoom-in;display:block;width:100%;padding:0;border:none;text-align:left}
+.work.show{animation:pop .5s cubic-bezier(.3,1.3,.5,1)}
+@keyframes pop{from{transform:scale(.95);opacity:0}}
+.work .ph{overflow:hidden;margin:8px 8px 0;border-radius:calc(var(--r) - 8px);background:#fff}
+.work img{width:100%;height:auto;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.work:hover img{transform:scale(1.04)}
+.work .cap{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:12px 16px 14px}
+.work .cap b{font-family:var(--f-display);font-weight:680;font-size:19px;letter-spacing:-.02em;line-height:1.15;display:block}
+.work .cap small{color:var(--muted);font-size:13px}
+.work .cat{flex:none;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--ink);border-radius:999px;padding:3px 9px;margin-top:2px}
+.more-row{display:flex;justify-content:center;margin-top:16px}
+.more-btn{font:600 16px var(--f-body);background:var(--ink);color:var(--paper);border:none;border-radius:999px;padding:14px 26px;cursor:pointer;transition:transform .25s,background .25s}
+.more-btn:hover{transform:translateY(-2px);background:var(--clay)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:80;background:rgba(17,28,54,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:calc(env(safe-area-inset-top,0px) + 64px) max(16px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 24px) max(16px,env(safe-area-inset-left,0px));animation:fade .25s ease;color:var(--paper)}
+.lb img{max-width:min(1100px,100%);max-height:calc(100svh - 260px);width:auto;height:auto;object-fit:contain;border-radius:14px;background:#fff}
+.lb .lcap{text-align:center}
+.lb .lcap b{font-family:var(--f-display);font-size:22px;letter-spacing:-.02em;display:block}
+.lb .lcap span{font-size:14px;opacity:.75}
+.lb .lcap{max-width:44em}
+.lb .lcap p{margin:8px 0 0;font-size:15px;line-height:1.55;opacity:.9}
+.lb .lcap .n{display:inline-block;margin-top:8px;font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;color:var(--sun)}
+.lb button{position:absolute;border:none;cursor:pointer;background:var(--paper);color:var(--ink);border-radius:999px;font-family:var(--f-mono);font-size:14px;letter-spacing:.08em}
+.lb .x{top:calc(env(safe-area-inset-top,0px) + 14px);right:max(16px,env(safe-area-inset-right,0px));padding:10px 16px}
+.lb .pv,.lb .nx{top:50%;translate:0 -50%;width:48px;height:48px;font-size:20px}
+.lb .pv{left:max(12px,env(safe-area-inset-left,0px))}
+.lb .nx{right:max(12px,env(safe-area-inset-right,0px))}
+@media (max-width:640px){.lb .pv,.lb .nx{top:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);translate:none}}
+
+/* about */
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,96px);align-items:center}
+.photo{position:relative;max-width:480px;width:100%;justify-self:center;aspect-ratio:866/1000;isolation:isolate}
+.photo .disc{position:absolute;left:8%;right:8%;top:10%;aspect-ratio:1;border-radius:50%;background:var(--paper);z-index:-2}
+.photo .disc::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:2px dashed var(--ink);opacity:.35;animation:spin 40s linear infinite}
+@keyframes spin{to{rotate:360deg}}
+.photo .me{position:absolute;left:0;right:0;bottom:0;width:100%;z-index:1;filter:drop-shadow(0 18px 24px rgba(28,48,91,.18))}
+.photo .buddy{position:absolute;right:4%;top:14%;width:31%;z-index:0;transform-origin:20% 90%;animation:peek 7s cubic-bezier(.45,0,.3,1) infinite}
+@keyframes peek{
+  0%,100%{transform:translate(-55%,14%) rotate(-14deg)}
+  14%{transform:translate(6%,-4%) rotate(10deg)}
+  22%{transform:translate(2%,0) rotate(4deg)}
+  30%{transform:translate(6%,-3%) rotate(9deg)}
+  38%{transform:translate(2%,0) rotate(4deg)}
+  56%{transform:translate(2%,0) rotate(6deg)}
+  70%{transform:translate(-55%,14%) rotate(-14deg)}}
+.photo:hover .buddy{animation-duration:3.5s}
+.bub{position:absolute;z-index:2;font-family:var(--f-hand);font-weight:600;line-height:1;padding:9px 18px 11px;border-radius:999px;white-space:nowrap;animation:bubble 7s ease-in-out infinite}
+.bub.salam{left:-8%;top:-5%;background:var(--ink);color:var(--paper);font-size:clamp(24px,2.4vw,32px);rotate:-6deg}
+.bub.heyyo{right:-6%;top:3%;background:var(--sun);color:var(--ink);font-size:clamp(26px,2.6vw,34px);rotate:8deg;animation-name:bubble2}
+.bub.salam::after,.bub.heyyo::after{content:"";position:absolute;bottom:-9px;width:18px;height:18px;background:inherit;clip-path:polygon(0 0,100% 0,30% 100%)}
+.bub.salam::after{left:34px}
+.bub.heyyo::after{right:30px;clip-path:polygon(0 0,100% 0,70% 100%)}
+@keyframes bubble{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-6px) scale(1.03)}}
+@keyframes bubble2{0%,12%{transform:scale(0);opacity:0}18%,62%{transform:scale(1);opacity:1}70%,100%{transform:scale(0);opacity:0}}
+.about-copy{min-width:0;display:flex;flex-direction:column;gap:20px}
+.about-copy .lede{margin:0;font-family:var(--f-display);font-weight:560;font-size:clamp(21px,2.2vw,28px);line-height:1.3;letter-spacing:-.02em}
+.about-copy .motto{margin:4px 0 0;padding:18px 22px;background:var(--ink);color:var(--paper);border-radius:20px;display:flex;flex-direction:column;gap:4px;max-width:34em}
+.motto small{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sun)}
+.motto b{font-family:var(--f-display);font-weight:700;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em;line-height:1.15}
+.about-copy .big{margin:0;font-family:var(--f-display);font-weight:560;font-size:clamp(22px,2.4vw,31px);line-height:1.25;letter-spacing:-.02em}
+.about-copy .big em{font-style:normal;color:var(--clay)}
+.about-copy p{margin:0;color:var(--muted);max-width:36em}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:6px}
+.stat{background:var(--paper);border-radius:20px;padding:18px}
+.stat b{display:block;font-family:var(--f-display);font-weight:760;font-size:clamp(36px,4vw,54px);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.stat span{font-size:14px;color:var(--muted)}
+.stat:first-child b{color:var(--clay)}
+@media (max-width:880px){.about{grid-template-columns:1fr}.photo{margin-top:56px;max-width:400px}.bub.heyyo{right:0}.bub.salam{left:0;top:-9%}}
+@media (max-width:480px){.stats{grid-template-columns:1fr}}
+
+/* footer */
+.foot{background:var(--ink);color:var(--paper);border-radius:clamp(28px,5vw,56px) clamp(28px,5vw,56px) 0 0;overflow:hidden}
+.foot .wrap{padding-block:clamp(64px,9vw,110px) 0;display:grid;grid-template-columns:1.25fr .75fr;gap:40px 60px}
+.got{margin:0;font-family:var(--f-mono);font-size:14px;letter-spacing:.14em;color:var(--sun)}
+.foot h2{font-family:var(--f-display);font-weight:760;font-size:clamp(44px,7vw,100px);line-height:.94;letter-spacing:-.045em;margin:14px 0 28px;text-wrap:balance}
+.mailrow{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.email{font-family:var(--f-display);font-weight:560;font-size:clamp(20px,2.6vw,32px);letter-spacing:-.02em;border-bottom:3px solid var(--sun);user-select:all;overflow-wrap:anywhere}
+.copy{font:600 15px var(--f-body);background:var(--sun);color:var(--ink);border:none;border-radius:999px;padding:12px 20px;cursor:pointer;transition:transform .25s}
+.copy:hover{transform:translateY(-2px)}
+.copied{font-family:var(--f-hand);font-weight:600;font-size:24px;color:var(--sun);min-height:1.2em}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-content:end}
+.links h4{margin:0 0 12px;font-family:var(--f-mono);font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.6}
+.links ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.links a{text-decoration:none;font-weight:500;background:linear-gradient(var(--sun),var(--sun)) no-repeat 0 100%/0 2px;transition:background-size .3s}
+.links a:hover{background-size:100% 2px}
+.sign{grid-column:1/-1;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-top:clamp(20px,4vw,50px)}
+.sign .big{font-family:var(--f-display);font-weight:800;font-size:clamp(64px,15vw,220px);line-height:.78;letter-spacing:-.06em;color:#30508A;white-space:nowrap;user-select:none}
+.sign .big span{color:var(--sun)}
+.peek{width:clamp(70px,8vw,110px);flex:none;margin-bottom:-6px;transform:translateY(40%);transition:transform 1s cubic-bezier(.3,1.4,.5,1)}
+.peek.up{transform:translateY(12%)}
+.legal{grid-column:1/-1;position:relative;z-index:2;background:var(--ink);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:14px;opacity:.85;border-top:1px solid rgba(247,248,246,.18);padding-block:20px max(20px,env(safe-area-inset-bottom,0px))}
+.legal a{text-decoration:none;font-weight:600}
+@media (max-width:820px){.foot .wrap{grid-template-columns:1fr}}
+
+.pre{opacity:0;transform:translateY(40px)}
+.rin{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .intro{height:auto}
+  .pin{position:relative}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Nur Syamimi, back to top"><span class="dot"><img src="images/face.webp" alt="" width="552" height="900"></span><span class="nm">Nur Syamimi</span></a>
+    <button class="menu-btn" id="menuOpen" type="button" aria-expanded="false" aria-controls="menu">MENU<i aria-hidden="true"></i></button>
+  </div>
+</header>
+
+<div class="overlay" id="menu" hidden>
+  <div class="wrap top">
+    <span class="dot"><img src="images/face.webp" alt="" width="552" height="900"></span>
+    <button class="menu-btn" id="menuClose" type="button">CLOSE</button>
+  </div>
+  <nav class="wrap" aria-label="Main">
+    <a href="#top"><small>01</small>Home</a>
+    <a href="#services"><small>02</small>Services</a>
+    <a href="#works"><small>03</small>Works</a>
+    <a href="#about"><small>04</small>About</a>
+    <a href="#contact"><small>05</small>Contact</a>
+  </nav>
+  <div class="wrap bottom"><span>Nur Syamimi Salehuddin</span><span>Design Educator · Creative Designer</span></div>
+</div>
+
+<main>
+  <section class="intro" id="top" aria-label="Introduction">
+    <div class="pin">
+      <div class="zoom" id="zoom">
+        <div class="enter">
+          <div class="rig" id="rig">
+            <img class="base" src="images/face-base.webp" alt="Her signature character: a lemon with a big smile in a striped shirt" width="552" height="900">
+            <img class="brow bl" id="bl" src="images/browL.webp" alt="" aria-hidden="true">
+            <img class="brow br" id="br" src="images/browR.webp" alt="" aria-hidden="true">
+            <svg viewBox="0 0 552 900" aria-hidden="true">
+              <defs><clipPath id="mclip"><path id="mclipPath" d=""/></clipPath></defs>
+              <path id="mouth" fill="#1C305B" d=""/>
+              <g clip-path="url(#mclip)">
+                <path id="teeth" fill="#FFFFFF" d=""/>
+                <ellipse id="tongue" fill="#BA5042" cx="285" cy="680" rx="80" ry="50"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="dive" id="dive"></div>
+      <div class="intro-name" id="introName">
+        <h1>Nur Syamimi Salehuddin</h1>
+        <p>Design Educator · Creative Designer</p>
+      </div>
+      <span class="hint" id="hint" aria-hidden="true">SCROLL</span>
+    </div>
+  </section>
+
+  <section class="svc-sec" id="services">
+    <div class="wrap">
+      <div class="svc-head">
+        <div class="t"><p class="eyebrow">What I do</p><h2 class="h2">Design with a <span class="hl">human touch</span></h2></div>
+        <p>From logos to wall-sized murals, I make friendly visuals for brands, authors and schools.</p>
+      </div>
+      <div class="cards" id="cards">
+        <article class="scard c1" style="--i:0">
+          <div class="txt">
+            <span class="num">01 / 05</span>
+            <h3>Logo &amp; Branding</h3>
+            <p>Logos, packaging and identities with personality, for small businesses, events and communities.</p>
+            <ul><li>Logos</li><li>Packaging</li><li>Event identity</li></ul>
+            <button class="view" type="button" data-go="branding">VIEW WORK <i aria-hidden="true">→</i></button>
+          </div>
+          <div class="pic fit"><img src="images/logo-ekacita-0.webp" alt="Ekacita logo" width="1100" height="1100"></div>
+        </article>
+        <article class="scard c2" style="--i:1">
+          <div class="txt">
+            <span class="num">02 / 05</span>
+            <h3>Illustration &amp; Book Covers</h3>
+            <p>Portraits, posters and book covers, drawn by hand and finished digitally.</p>
+            <ul><li>Portraits</li><li>Posters</li><li>Book covers</li></ul>
+            <button class="view" type="button" data-go="illustration">VIEW WORK <i aria-hidden="true">→</i></button>
+          </div>
+          <div class="pic"><img src="images/scribble-0.webp" alt="Scribble portraits" width="1100" height="619"></div>
+        </article>
+        <article class="scard c3" style="--i:2">
+          <div class="txt">
+            <span class="num">03 / 05</span>
+            <h3>Murals</h3>
+            <p>Hand-painted walls for cafés, libraries and classrooms.</p>
+            <ul><li>Cafés</li><li>Libraries</li><li>Schools</li></ul>
+            <button class="view" type="button" data-go="murals">VIEW WORK <i aria-hidden="true">→</i></button>
+          </div>
+          <div class="pic"><img src="images/mural-yellow-0.webp" alt="Tokoh wall mural" width="1024" height="768"></div>
+        </article>
+        <article class="scard c4" style="--i:3">
+          <div class="txt">
+            <span class="num">04 / 05</span>
+            <h3>3D Printing</h3>
+            <p>My small 3D printing business: custom keychains, name tags, plaques and event souvenirs, designed and printed by me.</p>
+            <ul><li>Keychains</li><li>Name tags</li><li>Souvenirs</li></ul>
+            <button class="view" type="button" data-go="print3d">VIEW WORK <i aria-hidden="true">→</i></button>
+          </div>
+          <div class="pic"><img src="images/p3d-names-0.webp" alt="3D printed name keychains" width="825" height="1100"></div>
+        </article>
+        <article class="scard c5" style="--i:4">
+          <div class="txt">
+            <span class="num">05 / 05</span>
+            <h3>Art Education</h3>
+            <p>Visual Arts &amp; Design lessons, student projects, exhibitions, productions and school events.</p>
+            <ul><li>Student projects</li><li>Exhibitions</li><li>Events</li></ul>
+            <button class="view" type="button" data-go="teaching">VIEW WORK <i aria-hidden="true">→</i></button>
+          </div>
+          <div class="pic top"><img src="images/event-expo26-0.webp" alt="Nur Syamimi at the Visual Arts &amp; Design Exhibition 2026" width="619" height="1100"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="works">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <div class="t"><p class="eyebrow">Selected works</p><h2 class="h2">Recent <span class="hl">projects</span></h2></div>
+        <p class="sub">Tap any piece to see it larger.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter works" data-reveal>
+        <span class="fl">Design</span>
+        <button type="button" data-f="all" aria-pressed="true">All <small>51</small></button>
+        <button type="button" data-f="branding" aria-pressed="false">Logo &amp; Branding <small>9</small></button>
+        <button type="button" data-f="illustration" aria-pressed="false">Illustration <small>6</small></button>
+        <button type="button" data-f="books" aria-pressed="false">Book Covers <small>6</small></button>
+        <button type="button" data-f="murals" aria-pressed="false">Murals <small>7</small></button>
+        <button type="button" data-f="print3d" aria-pressed="false">3D Printing <small>7</small></button>
+        <span class="br"></span><span class="fl">Teaching</span>
+        <button type="button" data-f="teaching" aria-pressed="false">All teaching <small>16</small></button>
+        <button type="button" data-f="students" aria-pressed="false">Student Projects <small>7</small></button>
+        <button type="button" data-f="productions" aria-pressed="false">Productions <small>2</small></button>
+        <button type="button" data-f="events" aria-pressed="false">Events &amp; Exhibitions <small>7</small></button>
+      </div>
+      <div class="masonry" id="grid">
+        <button class="work" type="button" data-cat="branding" data-group="design" data-i="0" data-title="Ekacita" data-sub="Logo design" data-desc="A bold, clean wordmark with a custom leaf-shaped letter “e”. It is built to work in a single colour, on dark and light backgrounds."><div class="ph"><img src="images/logo-ekacita-0.webp" alt="Ekacita, logo design" width="1100" height="1100" loading="lazy"></div><div class="cap"><span><b>Ekacita</b><small>Logo design</small></span><span class="cat">Logo &amp; Branding</span></div></button>
+        <button class="work" type="button" data-cat="illustration" data-group="design" data-i="9" data-title="Scribble portraits" data-sub="Custom portraits" data-desc="Family portraits drawn with loose, scribbly lines and soft colour. Every face stays recognisable, which makes them a personal gift."><div class="ph"><img src="images/scribble-0.webp" alt="Scribble portraits, custom portraits" width="1100" height="619" loading="lazy"></div><div class="cap"><span><b>Scribble portraits</b><small>Custom portraits</small></span><span class="cat">Illustration</span></div></button>
+        <button class="work" type="button" data-cat="murals" data-group="design" data-i="21" data-title="Tokoh wall" data-sub="Classroom mural" data-desc="Portrait murals on a bright yellow wall to give a classroom character."><div class="ph"><img src="images/mural-yellow-0.webp" alt="Tokoh wall, classroom mural" width="1024" height="768" loading="lazy"></div><div class="cap"><span><b>Tokoh wall</b><small>Classroom mural</small></span><span class="cat">Murals</span></div></button>
+        <button class="work" type="button" data-cat="books" data-group="design" data-i="15" data-title="Terusir" data-sub="Book cover · HAMKA" data-desc="Cover design for HAMKA&#x27;s “Terusir”: a lone figure walking into a dusk sky, to match the story&#x27;s mood of exile."><div class="ph"><img src="images/book-jerusir-0.webp" alt="Terusir, book cover · hamka" width="1100" height="1100" loading="lazy"></div><div class="cap"><span><b>Terusir</b><small>Book cover · HAMKA</small></span><span class="cat">Book Covers</span></div></button>
+        <button class="work" type="button" data-cat="events" data-group="teaching" data-i="44" data-title="Visual Arts &amp; Design Exhibition 2026" data-sub="Exhibition" data-desc="I organised this exhibition of MYP and DP students&#x27; Visual Arts and Design work on 29 June 2026."><div class="ph"><img src="images/event-expo26-0.webp" alt="Visual Arts &amp; Design Exhibition 2026, exhibition" width="619" height="1100" loading="lazy"></div><div class="cap"><span><b>Visual Arts &amp; Design Exhibition 2026</b><small>Exhibition</small></span><span class="cat">Events &amp; Exhibitions</span></div></button>
+        <button class="work" type="button" data-cat="branding" data-group="design" data-i="8" data-title="Tradition At Its Best" data-sub="Biscuit packaging" data-desc="Packaging for traditional Biskut Kelapa. Hand-drawn line illustrations wrap around a kraft box to give it a warm, homemade feel."><div class="ph"><img src="images/pack-tradition-0.webp" alt="Tradition At Its Best, biscuit packaging (photo 1)" width="1100" height="1100" loading="lazy"><span class="count">2 photos</span></div><div hidden><img src="images/pack-tradition-1.webp" alt="Tradition At Its Best, biscuit packaging (photo 2)" width="1100" height="736" loading="lazy"></div><div class="cap"><span><b>Tradition At Its Best</b><small>Biscuit packaging</small></span><span class="cat">Logo &amp; Branding</span></div></button>
+        <button class="work" type="button" data-cat="print3d" data-group="design" data-i="28" data-title="Name keychains" data-sub="3D printed" data-desc="Custom name keychains made from colourful letter blocks, designed and printed in my small 3D printing business."><div class="ph"><img src="images/p3d-names-0.webp" alt="Name keychains, 3d printed" width="825" height="1100" loading="lazy"></div><div class="cap"><span><b>Name keychains</b><small>3D printed</small></span><span class="cat">3D Printing</span></div></button>
+        <button class="work" type="button" data-cat="illustration" data-group="design" data-i="10" data-title="Pop portrait series" data-sub="Digital portraits" data-desc="Digital portraits in a pop-art “melting” style, with bright backgrounds and bold outlines."><div class="ph"><img src="images/pop-portraits-0.webp" alt="Pop portrait series, digital portraits" width="1100" height="619" loading="lazy"></div><div class="cap"><span><b>Pop portrait series</b><small>Digital portraits</small></span><span class="cat">Illustration</span></div></button>
+        <button class="work" type="button" data-cat="students" data-group="teaching" data-i="36" data-title="The Little Library" data-sub="MYP 5 project · 2025/26" data-desc="MYP 5 Design students designed, built and decorated little free libraries to encourage reading around the school."><div class="ph"><img src="images/class-library-0.webp" alt="The Little Library, myp 5 project · 2025/26 (photo 1)" width="852" height="1100" loading="lazy"><span class="count">3 photos</span></div><div hidden><img src="images/class-library-1.webp" alt="The Little Library, myp 5 project · 2025/26 (photo 2)" width="859" height="1100" loading="lazy"><img src="images/class-library-2.webp" alt="The Little Library, myp 5 project · 2025/26 (photo 3)" width="842" height="1100" loading="lazy"></div><div class="cap"><span><b>The Little Library</b><small>MYP 5 project · 2025/26</small></span><span class="cat">Student Projects</span></div></button>
+        <button class="work" type="button" data-cat="branding" data-group="design" data-i="1" data-title="Kulawangsa Campers" data-sub="Logo design" data-desc="A badge logo for a camping group: a simple tent framed by the name, with a sunrise and a crescent moon for adventures that run from day into night."><div class="ph"><img src="images/logo-kulawangsa-0.webp" alt="Kulawangsa Campers, logo design" width="1100" height="1100" loading="lazy"></div><div class="cap"><span><b>Kulawangsa Campers</b><small>Logo design</small></span><span class="cat">Logo &amp; Branding</span></div></button>
+        <button class="work" type="button" data-cat="murals" data-group="design" data-i="23" data-title="Peribahasa mural" data-sub="Outdoor wall mural" data-desc="A large black-and-white mural pairing a Malay proverb with a portrait, painted on an outdoor brick wall."><div class="ph"><img src="images/mural-peribahasa-0.webp" alt="Peribahasa mural, outdoor wall mural" width="1024" height="768" loading="lazy"></div><div class="cap"><span><b>Peribahasa mural</b><small>Outdoor wall mural</small></span><span class="cat">Murals</span></div></button>
+        <button class="work" type="button" data-cat="productions" data-group="teaching" data-i="42" data-title="Wayang Kulit shadow play" data-sub="IDU · Design &amp; Performing Arts" data-desc="An interdisciplinary unit between Design and Performing Arts. Design students made the shadow puppets and the screen frame, and Performing Arts students brought the story to life on stage."><div class="ph"><img src="images/prod-wayang-0.webp" alt="Wayang Kulit shadow play, idu · design &amp; performing arts (photo 1)" width="825" height="1100" loading="lazy"><span class="count">2 photos</span></div><div hidden><img src="images/prod-wayang-1.webp" alt="Wayang Kulit shadow play, idu · design &amp; performing arts (photo 2)" width="825" height="1100" loading="lazy"></div><div class="cap"><span><b>Wayang Kulit shadow play</b><small>IDU · Design &amp; Performing Arts</small></span><span class="cat">Productions</span></div></button>
+        <button class="work" type="button" data-cat="books" data-group="design" data-i="16" data-title="Terapi Buku" data-sub="Book cover" data-desc="A light, hand-drawn cover showing a reader lost in a book on a train, for a book about reading as therapy."><div class="ph"><img src="images/book-terapi-0.webp" alt="Terapi Buku, book cover" width="1100" height="1100" loading="lazy"></div><div class="cap"><span><b>Terapi Buku</b><small>Book cover</small></span><span class="cat">Book Covers</span></div></button>
+        <button class="work" type="button" data-cat="branding" data-group="design" data-i="2" data-title="RekaJelma" data-sub="Logo design" data-desc="A cube that folds into the letters R and J, in a fresh green. It works as a flat logo and as a 3D printed sign."><div class="ph"><img src="images/logo-rekajelma-0.webp" alt="RekaJelma, logo design" width="1100" height="1100" loading="lazy"></div><div class="cap"><span><b>RekaJelma</b><small>Logo design</small></span><span class="cat">Logo &amp; Branding</span></div></button>
+        <button class="work" type="button" data-cat="illustration" data-group="design" data-i="12" data-title="Anakku, maafkanlah ibu…" data-sub="Illustrated poster" data-desc="An illustrated poster about a working mother&#x27;s love and guilt, told with simple shapes and a warm, quiet palette."><div class="ph"><img src="images/poster-ibu-0.webp" alt="Anakku, maafkanlah ibu…, illustrated poster" width="778" height="1100" loading="lazy"></div><div class="cap"><span><b>Anakku, maafkanlah ibu…</b><small>Illustrated poster</small></span><span class="cat">Illustration</span></div></button>
+        <button class="work" type="button" data-cat="print3d" data-group="design" data-i="29" data-title="Logo stands &amp; name plates" data-sub="3D printed" data-desc="3D printed logo stands and name plates for a university collaboration event."><div class="ph"><img src="images/p3d-event-0.webp" alt="Logo stands &amp; name plates, 3d printed (photo 1)" width="619" height="1100" loading="lazy"><span class="count">2 photos</span></div><div hidden><img src="images/p3d-event-1.webp" alt="Logo stands &amp; name plates, 3d printed (photo 2)" width="619" height="1100" loading="lazy"></div><div class="cap"><span><b>Logo stands &amp; name plates</b><small>3D printed</small></span><span class="cat">3D Printing</span></div></button>
+        <button class="work" type="button" data-cat="events" data-group="teaching" data-i="45" data-title="Continuum Exhibition 2025" data-sub="Exhibition" data-desc="I handled the 2025 Continuum Exhibition for Visual Arts and Design, from planning to the poster and the display."><div class="ph"><img src="images/event-continuum-0.webp" alt="Continuum Exhibition 2025, exhibition" width="619" height="1100" loading="lazy"></div><div class="cap"><span><b>Continuum Exhibition 2025</b><small>Exhibition</small></span><span class="cat">Events &amp; Exhibitions</span></div></button>
+        <button class="work" type="button" data-cat="murals" data-group="design" data-i="24" data-title="Kopi Kebun Klasik" data-sub="Café wall mural" data-desc="A coffee cup logo mural for a garden café: “Nak kopi? Bikin sendiri!”"><div class="ph"><img src="images/mural-kopi-0.webp" alt="Kopi Kebun Klasik, café wall mural" width="1024" height="768" loading="lazy"></div><div class="cap"><span><b>Kopi Kebun Klasik</b><small>Café wall mural</small></span><span class="cat">Murals</span></div></button>
+        <button class="work" type="button" data-cat="students" data-group="teaching" data-i="35" data-title="Grow · Unity · Create" data-sub="Typography lesson" data-desc="Students learned about typography, but with a twist: they had to build their letters from natural things they found around the school, like twigs, leaves and seeds."><div class="ph"><img src="images/class-letters-0.webp" alt="Grow · Unity · Create, typography lesson" width="1100" height="825" loading="lazy"></div><div class="cap"><span><b>Grow · Unity · Create</b><small>Typography lesson</small></span><span class="cat">Student Projects</span></div></button>
+        <button class="work" type="button" data-cat="books" data-group="design" data-i="17" data-title="Sebelum Masuk Pejabat" data-sub="Book cover" data-desc="A figure stepping through a bright doorway: a clear visual for a guide to starting working life."><div class="ph"><img src="images/book-pejabat-0.webp" alt="Sebelum Masuk Pejabat, book cover" width="1100" height="843" loading="lazy"></div><div class="cap"><span><b>Sebelum Masuk Pejabat</b><small>Book cover</small></span><span class="cat">Book Covers</span></div></button>
+        <button class="work" type="button" data-cat="branding" data-group="design" data-i="3" data-title="Famous Dessert" data-sub="Logo for a dessert shop" data-desc="Retro, chunky lettering for a dessert shop, made to stand out on signboards, cups and packaging."><div class="ph"><img src="images/logo-dessert-0.webp" alt="Famous Dessert, logo for a dessert shop" width="1100" height="1100" loading="lazy"></div><div class="cap"><span><b>Famous Dessert</b><small>Logo for a dessert shop</small></span><span class="cat">Logo &amp; Branding</span></div></button>
+        <button class="work" type="button" data-cat="illustration" data-group="design" data-i="11" data-title="Mesin jahit nenek" data-sub="Painting" data-desc="A painting of a grandmother at her sewing machine: a study of texture, light and memory."><div class="ph"><img src="images/painting-0.webp" alt="Mesin jahit nenek, painting" width="1100" height="825" loading="lazy"></div><div class="cap"><span><b>Mesin jahit nenek</b><small>Painting</small></span><span class="cat">Illustration</span></div></button>
+        <button class="work" type="button" data-cat="events" data-group="teaching" data-i="46" data-title="Sports Day 2026" data-sub="Event design" data-desc="I handled the design for Sports Day 2026: banners, backdrop and posters, and I helped run the activities on the day."><div class="ph"><img src="images/event-sports26-0.webp" alt="Sports Day 2026, event design" width="825" height="1100" loading="lazy"></div><div class="cap"><span><b>Sports Day 2026</b><small>Event design</small></span><span class="cat">Events &amp; Exhibitions</span></div></button>
+        <button class="work" type="button" data-cat="print3d" data-group="design" data-i="30" data-title="Birthday keychains" data-sub="3D printed" data-desc="Party favours with each child&#x27;s face drawn in my style and printed as a keychain."><div class="ph"><img src="images/p3d-birthday-0.webp" alt="Birthday keychains, 3d printed" width="619" height="1100" loading="lazy"></div><div class="cap"><span><b>Birthday keychains</b><small>3D printed</small></span><span class="cat">3D Printing</span></div></button>
+        <button class="work" type="button" data-cat="murals" data-group="design" data-i="25" data-title="A room without books" data-sub="Library mural" data-desc="A Cicero quote with a stack of books and a reading chair, painted for a library corner."><div class="ph"><img src="images/mural-books-0.webp" alt="A room without books, library mural" width="1024" height="768" loading="lazy"></div><div class="cap"><span><b>A room without books</b><small>Library mural</small></span><span class="cat">Murals</span></div></button>
+        <button class="work" type="button" data-cat="illustration" data-group="design" data-i="14" data-title="Boat Noodle" data-sub="T-shirt illustration contest" data-desc="A T-shirt illustration packed with the restaurant&#x27;s noodles, drinks and characters."><div class="ph"><img src="images/shirt-boat-0.webp" alt="Boat Noodle, t-shirt illustration contest" width="934" height="1100" loading="lazy"></div><div class="cap"><span><b>Boat Noodle</b><small>T-shirt illustration contest</small></span><span class="cat">Illustration</span></div></button>
+        <button class="work" type="button" data-cat="students" data-group="teaching" data-i="37" data-title="Puppet Theatre" data-sub="MYP 5 project · 2026" data-desc="A 2026 MYP 5 student project. Students designed and built puppet theatres and documented the whole process in their e-portfolios."><div class="ph"><img src="images/class-theatre-0.webp" alt="Puppet Theatre, myp 5 project · 2026" width="825" height="1100" loading="lazy"></div><div class="cap"><span><b>Puppet Theatre</b><small>MYP 5 project · 2026</small></span><span class="cat">Student Projects</span></div></button>
+        <button class="work" type="button" data-cat="branding" data-group="design" data-i="4" data-title="Secangkir Popis" data-sub="Café logo" data-desc="The letter C becomes a cup, a playful nod to the name “Secangkir” (a cup of)."><div class="ph"><img src="images/logo-popis-0.webp" alt="Secangkir Popis, café logo" width="1100" height="986" loading="lazy"></div><div class="cap"><span><b>Secangkir Popis</b><small>Café logo</small></span><span class="cat">Logo &amp; Branding</span></div></button>
+        <button class="work" type="button" data-cat="books" data-group="design" data-i="18" data-title="Aku &amp; Al-Quran" data-sub="Book cover" data-desc="A calm, minimal cover with soft colours and a single flowing illustration."><div class="ph"><img src="images/book-quran-0.webp" alt="Aku &amp; Al-Quran, book cover" width="1100" height="843" loading="lazy"></div><div class="cap"><span><b>Aku &amp; Al-Quran</b><small>Book cover</small></span><span class="cat">Book Covers</span></div></button>
+        <button class="work" type="button" data-cat="illustration" data-group="design" data-i="13" data-title="Jangan Biarkan Rasuah" data-sub="Poster competition" data-desc="An anti-corruption poster: a money shredder shows how corruption can cut a career short."><div class="ph"><img src="images/poster-rasuah-0.webp" alt="Jangan Biarkan Rasuah, poster competition" width="778" height="1100" loading="lazy"></div><div class="cap"><span><b>Jangan Biarkan Rasuah</b><small>Poster competition</small></span><span class="cat">Illustration</span></div></button>
+        <button class="work" type="button" data-cat="events" data-group="teaching" data-i="48" data-title="Sports Day jersey" data-sub="T-shirt design" data-desc="I designed this jersey, front and back, for the school&#x27;s Sports Day."><div class="ph"><img src="images/event-jersey-0.webp" alt="Sports Day jersey, t-shirt design" width="1100" height="726" loading="lazy"></div><div class="cap"><span><b>Sports Day jersey</b><small>T-shirt design</small></span><span class="cat">Events &amp; Exhibitions</span></div></button>
+        <button class="work" type="button" data-cat="print3d" data-group="design" data-i="32" data-title="Trip tags" data-sub="3D printed" data-desc="Luggage tags and keychains for group trips, designed around each trip&#x27;s name and destination."><div class="ph"><img src="images/p3d-trip-0.webp" alt="Trip tags, 3d printed (photo 1)" width="643" height="1100" loading="lazy"><span class="count">3 photos</span></div><div hidden><img src="images/p3d-trip-1.webp" alt="Trip tags, 3d printed (photo 2)" width="619" height="1100" loading="lazy"><img src="images/p3d-trip-2.webp" alt="Trip tags, 3d printed (photo 3)" width="619" height="1100" loading="lazy"></div><div class="cap"><span><b>Trip tags</b><small>3D printed</small></span><span class="cat">3D Printing</span></div></button>
+        <button class="work" type="button" data-cat="murals" data-group="design" data-i="27" data-title="Jom Kembara Bersama Buku" data-sub="Library mural" data-desc="Life-size figures and a speech bubble inviting students to travel through books."><div class="ph"><img src="images/mural-kembara-0.webp" alt="Jom Kembara Bersama Buku, library mural" width="741" height="1061" loading="lazy"></div><div class="cap"><span><b>Jom Kembara Bersama Buku</b><small>Library mural</small></span><span class="cat">Murals</span></div></button>
+        <button class="work" type="button" data-cat="branding" data-group="design" data-i="7" data-title="Bulan Bintang" data-sub="Packaging design contest" data-desc="A full packaging set for a Baju Melayu and Baju Raya brand: front and back paper bags, gift box, hang tag and label tag."><div class="ph"><img src="images/pack-bulan-0.webp" alt="Bulan Bintang, packaging design contest" width="1100" height="619" loading="lazy"></div><div class="cap"><span><b>Bulan Bintang</b><small>Packaging design contest</small></span><span class="cat">Logo &amp; Branding</span></div></button>
+        <button class="work" type="button" data-cat="students" data-group="teaching" data-i="38" data-title="MYP Design booklets" data-sub="Cover file design" data-desc="I designed the cover files that MYP students use to compile their project work into an e-portfolio."><div class="ph"><img src="images/class-myp-0.webp" alt="MYP Design booklets, cover file design" width="619" height="1100" loading="lazy"></div><div class="cap"><span><b>MYP Design booklets</b><small>Cover file design</small></span><span class="cat">Student Projects</span></div></button>
+        <button class="work" type="button" data-cat="productions" data-group="teaching" data-i="43" data-title="The Lorax, PYP Production" data-sub="Performing Arts &amp; Design · 2024" data-desc="A 2024 collaboration between Performing Arts and Design for the PYP production of The Lorax."><div class="ph"><img src="images/prod-lorax-0.webp" alt="The Lorax, PYP Production, performing arts &amp; design · 2024" width="707" height="1100" loading="lazy"></div><div class="cap"><span><b>The Lorax, PYP Production</b><small>Performing Arts &amp; Design · 2024</small></span><span class="cat">Productions</span></div></button>
+        <button class="work" type="button" data-cat="branding" data-group="design" data-i="5" data-title="RK60&#x27;s Reminiscence" data-sub="Reunion event logo" data-desc="A retro-style logo for a reunion, with lettering inspired by the era the group grew up in."><div class="ph"><img src="images/logo-rk60-0.webp" alt="RK60&#x27;s Reminiscence, reunion event logo" width="1100" height="544" loading="lazy"></div><div class="cap"><span><b>RK60&#x27;s Reminiscence</b><small>Reunion event logo</small></span><span class="cat">Logo &amp; Branding</span></div></button>
+        <button class="work" type="button" data-cat="books" data-group="design" data-i="19" data-title="Kak Syaurah, Nak Tanya Boleh?" data-sub="Book cover" data-desc="A friendly illustrated cover for a Q&amp;A book about the world of Quran memorisation."><div class="ph"><img src="images/book-syaurah-0.webp" alt="Kak Syaurah, Nak Tanya Boleh?, book cover" width="1100" height="843" loading="lazy"></div><div class="cap"><span><b>Kak Syaurah, Nak Tanya Boleh?</b><small>Book cover</small></span><span class="cat">Book Covers</span></div></button>
+        <button class="work" type="button" data-cat="events" data-group="teaching" data-i="49" data-title="Service as Action field trip shirt" data-sub="T-shirt design" data-desc="I designed this shirt for the 2025 Service as Action field trip, with a wildlife theme on the back."><div class="ph"><img src="images/event-saa-0.webp" alt="Service as Action field trip shirt, t-shirt design" width="1100" height="802" loading="lazy"></div><div class="cap"><span><b>Service as Action field trip shirt</b><small>T-shirt design</small></span><span class="cat">Events &amp; Exhibitions</span></div></button>
+        <button class="work" type="button" data-cat="print3d" data-group="design" data-i="31" data-title="Graduation 2025 souvenirs" data-sub="3D printed" data-desc="Mortarboard keychains made as graduation souvenirs."><div class="ph"><img src="images/p3d-grad-0.webp" alt="Graduation 2025 souvenirs, 3d printed" width="835" height="1100" loading="lazy"></div><div class="cap"><span><b>Graduation 2025 souvenirs</b><small>3D printed</small></span><span class="cat">3D Printing</span></div></button>
+        <button class="work" type="button" data-cat="murals" data-group="design" data-i="26" data-title="Portrait wall" data-sub="Library mural" data-desc="Line portraits of great thinkers painted across a library wall."><div class="ph"><img src="images/mural-tokoh-0.webp" alt="Portrait wall, library mural" width="1024" height="768" loading="lazy"></div><div class="cap"><span><b>Portrait wall</b><small>Library mural</small></span><span class="cat">Murals</span></div></button>
+        <button class="work" type="button" data-cat="students" data-group="teaching" data-i="39" data-title="Be Creative wall" data-sub="Classroom display" data-desc="In my design class there&#x27;s one spot where I pin up students&#x27; work, so visitors and other students can see it."><div class="ph"><img src="images/class-creative-0.webp" alt="Be Creative wall, classroom display" width="619" height="1100" loading="lazy"></div><div class="cap"><span><b>Be Creative wall</b><small>Classroom display</small></span><span class="cat">Student Projects</span></div></button>
+        <button class="work" type="button" data-cat="branding" data-group="design" data-i="6" data-title="Jubli Emas 1974–2024" data-sub="Logo competition entry" data-desc="A 50th anniversary logo where the number 50 is drawn as a road, carrying the theme “5 Dekad Melestari Kualiti”."><div class="ph"><img src="images/logo-jubli-0.webp" alt="Jubli Emas 1974–2024, logo competition entry" width="1100" height="1018" loading="lazy"></div><div class="cap"><span><b>Jubli Emas 1974–2024</b><small>Logo competition entry</small></span><span class="cat">Logo &amp; Branding</span></div></button>
+        <button class="work" type="button" data-cat="books" data-group="design" data-i="20" data-title="Cerita Budak Tahfiz" data-sub="Book cover series" data-desc="A two-book series with matching night-sky illustrations."><div class="ph"><img src="images/book-tahfiz-0.webp" alt="Cerita Budak Tahfiz, book cover series" width="1100" height="619" loading="lazy"></div><div class="cap"><span><b>Cerita Budak Tahfiz</b><small>Book cover series</small></span><span class="cat">Book Covers</span></div></button>
+        <button class="work" type="button" data-cat="events" data-group="teaching" data-i="47" data-title="Sports Day 2025" data-sub="Event design" data-desc="The photo wall, banners and posters for Sports Day 2025, plus other event materials."><div class="ph"><img src="images/event-sports25-0.webp" alt="Sports Day 2025, event design" width="825" height="1100" loading="lazy"></div><div class="cap"><span><b>Sports Day 2025</b><small>Event design</small></span><span class="cat">Events &amp; Exhibitions</span></div></button>
+        <button class="work" type="button" data-cat="print3d" data-group="design" data-i="33" data-title="Dentaventure 2026" data-sub="3D printed" data-desc="Event name tags with a friendly tooth mascot."><div class="ph"><img src="images/p3d-dental-0.webp" alt="Dentaventure 2026, 3d printed" width="619" height="1100" loading="lazy"></div><div class="cap"><span><b>Dentaventure 2026</b><small>3D printed</small></span><span class="cat">3D Printing</span></div></button>
+        <button class="work" type="button" data-cat="murals" data-group="design" data-i="22" data-title="La Ilaha Illallah" data-sub="Wall mural" data-desc="Arabic calligraphy and a hand-painted tree on a deep blue wall."><div class="ph"><img src="images/mural-tauhid-0.webp" alt="La Ilaha Illallah, wall mural" width="1100" height="819" loading="lazy"></div><div class="cap"><span><b>La Ilaha Illallah</b><small>Wall mural</small></span><span class="cat">Murals</span></div></button>
+        <button class="work" type="button" data-cat="students" data-group="teaching" data-i="40" data-title="Workshop Laboratory" data-sub="Display of students&#x27; work" data-desc="The design lab, where students&#x27; finished projects are displayed for everyone to see."><div class="ph"><img src="images/class-lab-0.webp" alt="Workshop Laboratory, display of students&#x27; work (photo 1)" width="619" height="1100" loading="lazy"><span class="count">2 photos</span></div><div hidden><img src="images/class-lab-1.webp" alt="Workshop Laboratory, display of students&#x27; work (photo 2)" width="825" height="1100" loading="lazy"></div><div class="cap"><span><b>Workshop Laboratory</b><small>Display of students&#x27; work</small></span><span class="cat">Student Projects</span></div></button>
+        <button class="work" type="button" data-cat="print3d" data-group="design" data-i="34" data-title="Custom plaques" data-sub="3D printed" data-desc="Personalised plaques for awards and retirements, including a farewell piece for Kak Zaidah."><div class="ph"><img src="images/p3d-plaques-0.webp" alt="Custom plaques, 3d printed (photo 1)" width="619" height="1100" loading="lazy"><span class="count">2 photos</span></div><div hidden><img src="images/p3d-plaques-1.webp" alt="Custom plaques, 3d printed (photo 2)" width="619" height="1100" loading="lazy"></div><div class="cap"><span><b>Custom plaques</b><small>3D printed</small></span><span class="cat">3D Printing</span></div></button>
+        <button class="work" type="button" data-cat="events" data-group="teaching" data-i="50" data-title="Graduation ceremony" data-sub="Event coordinator" data-desc="I was the event coordinator for the school&#x27;s graduation ceremony, covering the stage, backdrop and decoration."><div class="ph"><img src="images/event-grad-0.webp" alt="Graduation ceremony, event coordinator" width="1100" height="825" loading="lazy"></div><div class="cap"><span><b>Graduation ceremony</b><small>Event coordinator</small></span><span class="cat">Events &amp; Exhibitions</span></div></button>
+        <button class="work" type="button" data-cat="students" data-group="teaching" data-i="41" data-title="In the workshop" data-sub="Hands-on teaching" data-desc="Guiding students hands-on in the design workshop, from measuring and cutting to finishing."><div class="ph"><img src="images/class-helping-0.webp" alt="In the workshop, hands-on teaching" width="853" height="1100" loading="lazy"></div><div class="cap"><span><b>In the workshop</b><small>Hands-on teaching</small></span><span class="cat">Student Projects</span></div></button>
+      </div>
+      <div class="more-row" id="moreRow"><button class="more-btn" id="moreBtn" type="button">Show all works</button></div>
+    </div>
+  </section>
+
+  <section class="sec" id="about" style="padding-top:0">
+    <div class="wrap about">
+      <div class="photo" data-reveal>
+        <span class="disc" aria-hidden="true"></span>
+        <img class="buddy" src="images/face.webp" alt="" width="552" height="900" aria-hidden="true">
+        <img class="me" src="images/me-cut.webp" alt="Portrait of Nur Syamimi Salehuddin" width="866" height="1100">
+        <span class="bub salam">Assalamualaikum</span>
+        <span class="bub heyyo" aria-hidden="true">Heyyo!</span>
+      </div>
+      <div class="about-copy" data-reveal style="--d:.1s">
+        <p class="eyebrow">A little about me</p>
+        <h2 class="h2">Hi, I'm <span class="hl">Syamimi.</span></h2>
+        <p class="lede">Behind every design is a story, and behind every creation is a passion for exploring possibilities.</p>
+        <p>I am a Design Educator and Creative Designer who enjoys bringing ideas to life through art, technology, and meaningful learning experiences. I embrace challenges as opportunities to grow, learn, and discover my potential. I believe in pushing beyond my comfort zone, continuously improving myself, and turning ideas into reality.</p>
+        <p class="motto"><small>My personal motto</small><b>“Challenge Yourself Until You Succeed.”</b></p>
+        <div class="stats">
+          <div class="stat"><b data-count="50" data-suffix="+">50+</b><span>projects in this portfolio</span></div>
+          <div class="stat"><b data-count="7">7</b><span>murals painted</span></div>
+          <div class="stat"><b data-count="6">6</b><span>book covers designed</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="got">GOT QUESTIONS?</p>
+      <h2>Let's create something together.</h2>
+      <div class="mailrow">
+        <span class="email" id="email">syamimi.sdin@gmail.com</span>
+        <button class="copy" id="copy" type="button">Copy email</button>
+        <span class="copied" id="copied" role="status"></span>
+      </div>
+    </div>
+    <div class="links">
+      <div><h4>Explore</h4><ul><li><a href="#services">Services</a></li><li><a href="#works">Works</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Follow</h4><ul><li><a href="https://www.instagram.com/le.mottt/" target="_blank" rel="noopener">Instagram · @le.mottt</a></li><li><a href="mailto:syamimi.sdin@gmail.com">Email</a></li></ul></div>
+    </div>
+    <div class="sign" id="sign" aria-hidden="true">
+      <span class="big">myya~<span>.</span></span>
+      <img class="peek" id="peek" src="images/face.webp" alt="" width="552" height="900">
+    </div>
+    <div class="legal"><span>© 2026 Nur Syamimi Salehuddin</span><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Artwork viewer">
+  <button class="x" id="lbClose" type="button">CLOSE ✕</button>
+  <button class="pv" id="lbPrev" type="button" aria-label="Previous">←</button>
+  <img id="lbImg" src="" alt="">
+  <div class="lcap"><b id="lbTitle"></b><span id="lbSub"></span><p id="lbDesc"></p><span class="n" id="lbN"></span></div>
+  <button class="nx" id="lbNext" type="button" aria-label="Next">→</button>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.documentElement, hdr = document.getElementById('hdr');
+  var intro = document.getElementById('top'), zoom = document.getElementById('zoom'), rig = document.getElementById('rig');
+  var dive = document.getElementById('dive'), introName = document.getElementById('introName'), hint = document.getElementById('hint');
+  var mouth = document.getElementById('mouth'), clipP = document.getElementById('mclipPath'), teeth = document.getElementById('teeth'), tongue = document.getElementById('tongue');
+  var bl = document.getElementById('bl'), br = document.getElementById('br');
+
+  function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
+  function ss(a,b,v){ var t = clamp((v - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); }
+  function lerp(a,b,t){ return a + (b - a) * t; }
+
+  /* mouth geometry in the face's own 552x900 drawing space */
+  var CX = 285;
+  function geo(o){
+    return { y0: lerp(572, 522, o), w: lerp(222, 352, o), h: lerp(118, 262, o) };
+  }
+  function wob(t, k){ return k * (Math.sin(t * 17.3) * .6 + Math.sin(t * 31.7 + 1.3) * .4); }
+  function mouthPath(g){
+    var pts = [], n = 44, i, t, a, x, y, hw = g.w / 2, dip = g.h * .07;
+    for (i = 0; i <= n; i++){ t = i / n; x = CX - hw + g.w * t; y = g.y0 + dip * Math.sin(Math.PI * t) + wob(t, 1.2); pts.push(x.toFixed(1) + ',' + y.toFixed(1)); }
+    for (i = 1; i < n; i++){ t = i / n; a = Math.PI * t; x = CX + hw * Math.cos(a) * (1 - .04 * Math.sin(a)); y = g.y0 + g.h * Math.pow(Math.sin(a), .85) + wob(t + 2, 1.6); pts.push(x.toFixed(1) + ',' + y.toFixed(1)); }
+    return 'M' + pts.join('L') + 'Z';
+  }
+  function teethPath(g){
+    var hw = g.w * .27, top = g.y0 - 6, th = Math.max(16, g.h * .17), r = th * .7, l = CX - hw, rr = CX + hw, b = g.y0 + th;
+    return 'M' + l + ',' + top + 'L' + rr + ',' + top + 'L' + rr + ',' + (b - r) + 'Q' + rr + ',' + b + ' ' + (rr - r) + ',' + b +
+      'Q' + CX + ',' + (b - th * .35) + ' ' + (l + r) + ',' + b + 'Q' + l + ',' + b + ' ' + l + ',' + (b - r) + 'Z';
+  }
+  function drawMouth(o){
+    var g = geo(o), d = mouthPath(g);
+    mouth.setAttribute('d', d); clipP.setAttribute('d', d);
+    teeth.setAttribute('d', teethPath(g));
+    tongue.setAttribute('cx', CX); tongue.setAttribute('cy', (g.y0 + g.h * .98).toFixed(1));
+    tongue.setAttribute('rx', (g.w * .39).toFixed(1)); tongue.setAttribute('ry', (g.h * .42).toFixed(1));
+    var lift = o * 9;
+    bl.style.transform = 'translateY(' + (-lift) + '%) rotate(' + (-o * 8) + 'deg)';
+    br.style.transform = 'translateY(' + (-lift) + '%) rotate(' + (o * 8) + 'deg)';
+  }
+
+  var p = 0, oScroll = 0, talk = 0;
+  function render(){
+    var o = clamp(oScroll + talk, 0, 1);
+    drawMouth(o);
+    var z = ss(.44, .8, p);
+    if (z > 0){
+      var rw = rig.offsetWidth, rh = rig.offsetHeight;
+      var g = geo(1), fx = CX / 552 * rw, fy = (g.y0 + g.h * .44) / 900 * rh;
+      var s = 1 + Math.pow(z, 2.4) * 70;
+      zoom.style.transformOrigin = fx + 'px ' + fy + 'px';
+      zoom.style.transform = 'translateY(' + (-(fy - rh / 2) * Math.min(1, z * 2.5)).toFixed(1) + 'px) scale(' + s.toFixed(3) + ')';
+    } else { zoom.style.transform = ''; }
+    dive.style.opacity = ss(.7, .8, p).toFixed(3);
+    var f = 1 - ss(0, .14, p);
+    introName.style.opacity = f.toFixed(3); introName.style.transform = 'translateY(' + ((1 - f) * 40).toFixed(1) + 'px)';
+    hint.style.opacity = (f * .8).toFixed(3);
+    hdr.classList.toggle('solid', p > .62 || intro.getBoundingClientRect().bottom <= hdr.offsetHeight + 2);
+  }
+
+  function onScroll(){
+    var r = intro.getBoundingClientRect(), total = intro.offsetHeight - window.innerHeight;
+    p = reduce ? 0 : clamp(-r.top / Math.max(total, 1), 0, 1);
+    oScroll = ss(0, .44, p);
+  }
+
+  /* gentle "talking" while the page rests at the top */
+  var t0 = performance.now();
+  function loop(now){
+    if (!reduce){
+      var rest = 1 - ss(0, .06, p), t = (now - t0) / 1000;
+      talk = rest * .09 * (Math.sin(t * 2.4) * .5 + .5) * (Math.sin(t * .7) * .5 + .5);
+    }
+    render();
+    requestAnimationFrame(loop);
+  }
+
+  /* menu */
+  var menu = document.getElementById('menu'), openB = document.getElementById('menuOpen'), closeB = document.getElementById('menuClose');
+  function setMenu(on){ menu.hidden = !on; openB.setAttribute('aria-expanded', on); document.body.style.overflow = on ? 'hidden' : ''; (on ? closeB : openB).focus(); }
+  openB.addEventListener('click', function(){ setMenu(true); });
+  closeB.addEventListener('click', function(){ setMenu(false); });
+  menu.querySelectorAll('nav a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+
+  /* face follows the pointer a little */
+  if (!reduce && window.matchMedia('(pointer: fine)').matches){
+    intro.addEventListener('pointermove', function(e){
+      var x = e.clientX / window.innerWidth - .5, y = e.clientY / window.innerHeight - .5;
+      rig.style.transform = 'rotate(' + (x * 5).toFixed(2) + 'deg) translate(' + (x * 14).toFixed(1) + 'px,' + (y * 10).toFixed(1) + 'px)';
+    });
+    intro.addEventListener('pointerleave', function(){ rig.style.transform = ''; });
+  }
+
+  /* works: filter, show more, lightbox */
+  var fbtns = Array.prototype.slice.call(document.querySelectorAll('.filters button'));
+  var items = Array.prototype.slice.call(document.querySelectorAll('#grid .work'));
+  var moreRow = document.getElementById('moreRow'), LIMIT = 12, expanded = false, cur = 'all';
+  function apply(anim){
+    var shown = 0;
+    items.forEach(function(it){
+      var on = cur === 'all' || it.dataset.cat === cur || it.dataset.group === cur;
+      if (on && cur === 'all' && !expanded && shown >= LIMIT) on = false;
+      if (on) shown++;
+      it.hidden = !on; it.classList.remove('pre');
+      if (on && anim && !reduce){ it.classList.remove('show'); void it.offsetWidth; it.classList.add('show'); }
+    });
+    moreRow.hidden = !(cur === 'all' && !expanded);
+    layout();
+    fbtns.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.f === cur); });
+  }
+  var grid = document.getElementById('grid'), ncols = 0;
+  function layout(){
+    var n = window.innerWidth < 560 ? 1 : (window.innerWidth < 900 ? 2 : 3);
+    var cols = [], hs = [], i;
+    grid.textContent = '';
+    for (i = 0; i < n; i++){ var c = document.createElement('div'); c.className = 'mcol'; grid.appendChild(c); cols.push(c); hs.push(0); }
+    var list = items.slice();
+    if (cur !== 'all') list.sort(function(x, y){ return (+x.dataset.i) - (+y.dataset.i); });
+    list.forEach(function(it){
+      if (it.hidden){ cols[n - 1].appendChild(it); return; }
+      var im = it.querySelector('img'), r = (+im.getAttribute('height') || 1) / (+im.getAttribute('width') || 1);
+      var k = 0; for (i = 1; i < n; i++){ if (hs[i] < hs[k] - .05) k = i; }
+      cols[k].appendChild(it); hs[k] += r + .28;
+    });
+    ncols = n;
+  }
+  window.addEventListener('resize', function(){
+    var n = window.innerWidth < 560 ? 1 : (window.innerWidth < 900 ? 2 : 3);
+    if (n !== ncols) layout();
+  });
+  fbtns.forEach(function(b){ b.addEventListener('click', function(){ cur = b.dataset.f; apply(true); }); });
+  document.getElementById('moreBtn').addEventListener('click', function(){ expanded = true; apply(true); });
+  document.querySelectorAll('[data-go]').forEach(function(b){ b.addEventListener('click', function(){ cur = b.dataset.go; apply(true); document.getElementById('works').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'}); }); });
+  apply(false);
+
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbT = document.getElementById('lbTitle'), lbS = document.getElementById('lbSub'), lbD = document.getElementById('lbDesc'), lbN = document.getElementById('lbN'), slides = [], li = 0, lastFocus = null;
+  function build(){
+    slides = [];
+    items.filter(function(it){ return !it.hidden; }).forEach(function(it){
+      var imgs = it.querySelectorAll('img');
+      imgs.forEach(function(im, k){ slides.push({it: it, im: im, k: k, n: imgs.length}); });
+    });
+  }
+  function openLb(it){
+    build(); li = 0;
+    for (var x = 0; x < slides.length; x++){ if (slides[x].it === it){ li = x; break; } }
+    show(); lastFocus = it; lb.hidden = false; document.body.style.overflow = 'hidden'; document.getElementById('lbClose').focus();
+  }
+  function show(){
+    var sl = slides[li], it = sl.it;
+    lbImg.src = sl.im.src; lbImg.alt = sl.im.alt;
+    lbT.textContent = it.dataset.title; lbS.textContent = it.dataset.sub; lbD.textContent = it.dataset.desc || '';
+    lbN.textContent = sl.n > 1 ? 'PHOTO ' + (sl.k + 1) + ' OF ' + sl.n : '';
+  }
+  function step(d){ li = (li + d + slides.length) % slides.length; show(); }
+  function closeLb(){ lb.hidden = true; document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
+  items.forEach(function(it){ it.addEventListener('click', function(){ openLb(it); }); });
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  document.getElementById('lbPrev').addEventListener('click', function(){ step(-1); });
+  document.getElementById('lbNext').addEventListener('click', function(){ step(1); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if (!lb.hidden){ if (e.key === 'Escape') closeLb(); if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); }
+    else if (!menu.hidden && e.key === 'Escape') setMenu(false);
+  });
+
+  /* reveal + counters */
+  function countUp(el){
+    var end = +el.dataset.count, suf = el.dataset.suffix || '', s0 = null;
+    function st(t){ if (!s0) s0 = t; var k = Math.min((t - s0) / 1300, 1); k = 1 - Math.pow(1 - k, 3);
+      el.textContent = Math.round(end * k) + suf; if (k < 1) requestAnimationFrame(st); }
+    requestAnimationFrame(st);
+  }
+  var peek = document.getElementById('peek');
+  if (!reduce && 'IntersectionObserver' in window){
+    var vh = window.innerHeight;
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        if (el.classList.contains('pre')){ el.classList.add('rin'); el.classList.remove('pre'); }
+        el.querySelectorAll('[data-count]').forEach(countUp);
+        io.unobserve(el);
+      });
+    }, {threshold: .12});
+    document.querySelectorAll('[data-reveal]').forEach(function(el){
+      if (el.getBoundingClientRect().top > vh * .92){
+        el.classList.add('pre');
+        el.querySelectorAll('[data-count]').forEach(function(c){ c.textContent = '0'; });
+        io.observe(el);
+      }
+    });
+    new IntersectionObserver(function(es){ es.forEach(function(e){ peek.classList.toggle('up', e.isIntersecting); }); }, {threshold: .3}).observe(document.getElementById('sign'));
+  } else { peek.classList.add('up'); }
+
+  /* stacking cards */
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.scard'));
+  var stackOn = window.matchMedia('(min-width: 781px)');
+  function stack(){
+    if (reduce) return;
+    cards.forEach(function(c, i){
+      var next = cards[i + 1];
+      if (!next || !stackOn.matches){ c.style.setProperty('--s', 1); return; }
+      var a = c.getBoundingClientRect(), b = next.getBoundingClientRect();
+      c.style.setProperty('--s', (1 - clamp((a.bottom - b.top) / a.height, 0, 1) * .06).toFixed(4));
+    });
+  }
+  window.addEventListener('scroll', function(){ onScroll(); stack(); }, {passive:true});
+  window.addEventListener('resize', function(){ onScroll(); stack(); });
+  onScroll(); stack(); render(); requestAnimationFrame(loop);
+
+  /* copy email */
+  var copyBtn = document.getElementById('copy'), msg = document.getElementById('copied'), mail = document.getElementById('email');
+  copyBtn.addEventListener('click', function(){
+    var done = function(){ msg.textContent = 'Copied!'; setTimeout(function(){ msg.textContent = ''; }, 2000); };
+    var fallback = function(){ var s = window.getSelection(), r = document.createRange(); r.selectNodeContents(mail); s.removeAllRanges(); s.addRange(r); msg.textContent = 'Selected. Press Ctrl+C to copy'; };
+    try { navigator.clipboard.writeText(mail.textContent.trim()).then(done, fallback); } catch(e){ fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
